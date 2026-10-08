@@ -63,3 +63,40 @@ def calculate_tip(bill):
 calculate_tip(300)
 
 # good comments states why not the obvious
+
+#Discussion on datatypes and type conversion
+sum = 10 + 5 + 4
+name = "Gracieux" + " Kitsa"
+
+value = "5"
+final_sum = int(value) + sum
+
+print(f"The total sum is {final_sum}")
+
+#handling numbers
+#power numbers 
+
+squared = 5 ** 2
+cubed = 2 ** 3
+print(f"squared is {squared} and cubed is {cubed}")
+
+# Divisions use / or // for rounding up
+
+result = 10/3
+result2 = 10 // 3
+print(f"result 1 is {result} and result 2 is {result2}")
+
+# Dealing with strings.
+#use single, double or triple 
+
+paragraph = """ This is
+a multi line string
+"""
+
+#--------------------------------------------
+stars = "*" * 5
+print(stars)
+
+# String methods
+message = "hello there"
+print(len(message))
