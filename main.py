@@ -273,6 +273,7 @@ while count < 5:
 
 
 #Data structure and Algorithm 
+# Lists are ordered collections and is a versatile data structure.
 
 my_list = []
 
@@ -308,3 +309,172 @@ for person in students_list:
 # Accessing a single value from a dictionary inside a list
 
 print(students_list[0]["name"])
+
+shopping_list = []
+
+shopping_list.append("Milk")
+shopping_list.append("Salt")
+
+shopping_list.extend(["Sugar", "Onions", "Tomatos"])
+
+print(shopping_list)
+
+shopping_list.pop()
+
+print(shopping_list)
+
+
+
+items = ["cooking oil", "spahgetti", "sausage", "pork"]
+shopping_list =[]
+
+shopping_list.extend(items)
+print(shopping_list)
+
+shopping_list.insert(0, "Maize")
+print(shopping_list)
+
+
+
+# More on data structure, dictionaries
+# This stores data in key-value pairs
+
+#creating a dictionary
+
+# Empty dictionary
+my_dict = {}
+
+# Dictionary with data
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+# Different ways to create
+scores = dict(math=95, english=87, science=92, geography="Fail")
+
+print(scores)
+
+person = {"name": "Alice", "age": 30, "city": "New York"}
+
+# Get values by key
+print(person["name"])       # "Alice"
+print(person["age"])        # 30
+
+# Safer with get()
+print(person.get("job"))    # None (no error)
+print(person.get("job", "Unknown"))  # "Unknown" (default)
+
+for key, value in person.items():
+    print(key, value)
+
+# -------------------------------------------------------
+
+#changing dictionaries
+
+person = {"name":"Alice", "age":30}
+
+person["email"] = "alice@example.com"
+person["age"]=31
+
+print(person)
+
+print(person["email"])
+del person["email"]
+print(person)
+
+person.clear() # remove all
+print(person) # empty dictionary
+
+
+person = {"name": "Alice", "age": 30, "city": "New York"}
+
+# Get all keys, values, or items
+print(person.keys())    # dict_keys(['name', 'age', 'city'])
+print(person.values())  # dict_values(['Alice', 30, 'New York'])
+print(person.items())   # dict_items([('name', 'Alice'), ...])
+
+# Check if key exists
+if "name" in person:
+    print("Name found!")
+
+# Update multiple values
+person.update({"age": 31, "job": "Engineer"})
+
+
+# Dictionary of dictionaries
+students = {
+    "alice": {"age": 20, "grade": "A"},
+    "bob": {"age": 21, "grade": "B"},
+    "charlie": {"age": 19, "grade": "A"}
+}
+
+# Access nested data
+print(students["alice"]["grade"])  # "A"
+
+
+# TUPLES 
+# Work with immutable sequences.
+#they are like lists, but they can't be changed once created.
+
+#eg: coordinates, RGB colors, database records.
+
+empty = ()
+
+#tuple with items
+point = (3, 5)
+colors = ("red", "green", "blue")
+
+#single items in a tuple is with a comma
+single = (42,)
+print(type(single))
+
+coordinates = 10, 20
+print(type(coordinates))
+
+point = (3, 5)
+colors = ("red", "green", "blue")
+
+# Get items
+print(point[0])      # 3
+print(colors[-1])    # "blue"
+
+# Slicing works too
+print(colors[0:2])   # ("red", "green")
+
+######################## Tuple unpacking #####################
+ 
+point = (3, 5)
+x, y = point 
+
+print(f"point x is {x}, and point y is {y}")
+
+#multiple assignment
+a, b, c = 1, 2, 3
+
+#swap variables 
+x, y = y , x
+print(x)
+
+#---------------------------
+#converting the tuple to a list, manupulate the list and then convert back to a tuple
+point = (4,)
+
+temp = list(point)
+temp[0]=3
+
+point = tuple(temp)
+
+print(point)
+print(type(point))
+
+unique_id = 223, 455, 656, 869
+
+for i in unique_id:
+    print(i)
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+# SETS
+#--------------------------------------------------------
