@@ -279,6 +279,8 @@ my_list = []
 
 fruits = ["apple", "banana", "orange"]
 numbers = [1, 3, 5, 2, 4]
+numbers.sort()
+print(numbers)
 mixed =["hello", 42, True, 2.32]
 students_list= [
     {
@@ -323,6 +325,18 @@ shopping_list.pop()
 
 print(shopping_list)
 
+# Simple project to capitalize then first letter of those names.
+
+names = ["gracieux kitsa", "ryan john", "alice brown"]
+
+formatted_names = [name.title() for name in names]
+
+formatted_names.sort()
+
+print(formatted_names)
+
+
+# more list examples
 
 
 items = ["cooking oil", "spahgetti", "sausage", "pork"]
@@ -478,3 +492,25 @@ for i in unique_id:
 
 # SETS
 #--------------------------------------------------------
+
+empty_set = set()
+
+scores = [20, 30, 55, 20]
+unique_scores = set(scores)
+print(unique_scores)
+
+colors = {"red", "blue"}
+
+# Add items
+colors.add("green")
+print(colors)  # {'red', 'blue', 'green'}
+
+# Remove items
+colors.remove("blue")    # Error if not found
+colors.discard("yellow") # No error if not found
+
+# Check membership
+if "red" in colors:
+    print("Red is available")
+
+
